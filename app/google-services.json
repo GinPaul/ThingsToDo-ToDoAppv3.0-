@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "442421147140",
+    "project_id": "things-to-do-94e40",
+    "storage_bucket": "things-to-do-94e40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442421147140:android:706e6dcb94a20b1527e751",
+        "android_client_info": {
+          "package_name": "com.kodego.app.thingstodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442421147140-10mh09tmt5q4m05ppurf9ceccm7jir4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYPICiHKGtzsAZ_0yOPoiuC2wlM3VtVbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442421147140-10mh09tmt5q4m05ppurf9ceccm7jir4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
