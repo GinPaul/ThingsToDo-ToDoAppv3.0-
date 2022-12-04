@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.kodego.app.thingstodo"
-        minSdk 21
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -48,6 +48,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
+    //for gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
 
     //for firebase
     implementation platform('com.google.firebase:firebase-bom:31.1.0')

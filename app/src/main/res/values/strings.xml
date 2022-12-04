@@ -6,4 +6,6 @@
     <string name="re_enter_your_pass">Renter Password</string>
     <string name="enter_your_email">Email</string>
     <string name="type_your_task">Input Task</string>
+    <string name="schedule_the_notification">Schedule the Notification</string>
+    <string name="organize_your_day">Organize Your Day</string>
 </resources>

@@ -1,11 +1,13 @@
 package com.kodego.app.thingstodo.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.textfield.TextInputEditText
@@ -18,8 +20,12 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.kodego.app.thingstodo.R
 import com.kodego.app.thingstodo.TaskAdapter
+import com.kodego.app.thingstodo.TaskNotification
 import com.kodego.app.thingstodo.ToDoData
 import com.kodego.app.thingstodo.databinding.FragmentHomeBinding
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.HashMap
 
 class HomeFragment : Fragment(), ToDoDialogFragment.OnDialogNextBtnClickListener,
     TaskAdapter.TaskAdapterInterface {
@@ -34,6 +40,11 @@ class HomeFragment : Fragment(), ToDoDialogFragment.OnDialogNextBtnClickListener
     private lateinit var taskAdapter: TaskAdapter
     private lateinit var toDoItemList: MutableList<ToDoData>
 
+    lateinit var simpleDateFormat: SimpleDateFormat
+    lateinit var date: String
+    lateinit var textView: TextView
+    lateinit var calendar: Calendar
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,6 +52,8 @@ class HomeFragment : Fragment(), ToDoDialogFragment.OnDialogNextBtnClickListener
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,6 +78,29 @@ class HomeFragment : Fragment(), ToDoDialogFragment.OnDialogNextBtnClickListener
             )
 
         }
+
+        //showing current date and time
+        textView = binding.tvDateToday
+        calendar = Calendar.getInstance()
+        simpleDateFormat = SimpleDateFormat("EEE | MMM dd, yyyy")
+        date = simpleDateFormat.format(calendar.time)
+        textView.text = date
+
+        //to open notification layout
+        binding.alarmNotification.setOnClickListener() {
+            Toast.makeText(context, "Create your reminder.", Toast.LENGTH_SHORT).show()
+            //when in fragment, "context" is enough instead of applicationContext
+
+//            val intent = Intent(this, TaskNotification::class.java)
+//            startActivity(intent) >> this is not working in a fragment
+
+            //do this instead in a fragment when transferring from fragment to next view
+            requireActivity().run{
+                startActivity(Intent(this, TaskNotification::class.java))
+                finish()
+            }
+        }
+
     }
 
     private fun getTaskFromFirebase() {

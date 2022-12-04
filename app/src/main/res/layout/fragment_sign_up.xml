@@ -4,54 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_500"
     tools:context=".fragments.SignUpFragment">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/saitama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="130dp"
-        android:rotation="180"
-        android:scaleType="fitXY"
-        android:src="@drawable/saitama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="12dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/saitama"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
         android:fontFamily="sans-serif"
         android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
@@ -59,14 +26,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="30dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -84,7 +51,8 @@
                 android:hint="@string/enter_your_email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp" />
+                android:paddingTop="15dp"
+                android:textColor="@color/darkBlue" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -104,7 +72,6 @@
         app:layout_constraintTop_toBottomOf="@id/cardView1">
 
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -122,7 +89,8 @@
                 android:hint="@string/enter_your_pass"
                 android:inputType="textPassword"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp" />
+                android:paddingTop="15dp"
+                android:textColor="@color/darkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,7 +130,8 @@
                 android:hint="@string/re_enter_your_pass"
                 android:inputType="textPassword"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp" />
+                android:paddingTop="15dp"
+                android:textColor="@color/darkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,7 +144,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:src="@drawable/bottom_shape"
+        android:background="@android:color/transparent"
+        android:src="@drawable/rightarrownext"
         app:layout_constraintEnd_toEndOf="@id/cardView3"
         app:layout_constraintTop_toBottomOf="@id/cardView3" />
 
@@ -183,26 +153,26 @@
         android:id="@+id/textview32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="sans-serif"
-        android:text="Already Registered !!"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSignIn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/nextBtn" />
+        android:text="Already Registered?"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextBtn" />
 
     <TextView
         android:id="@+id/textViewSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:fontFamily="sans-serif"
-        android:text=" Sign In"
-        android:textColor="@color/darkBlue"
-        android:textSize="16sp"
+        android:text="Sign In Here"
+        android:textColor="@color/sky_green"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textview32"
         app:layout_constraintTop_toTopOf="@id/textview32" />
 
