@@ -1,6 +1,8 @@
 package com.kodego.app.thingstodo
 
 import android.app.*
+import android.app.PendingIntent.getActivity
+import android.content.ClipData.newIntent
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +29,12 @@ class TaskNotification : AppCompatActivity() {
         createNotificationChannel()
         binding.submitButton.setOnClickListener { scheduleNotification() }
 
+
+//        binding.backButton.setOnClickListener {
+//                val intent = Intent (this@TaskNotification, MainActivity::class.java)
+//                startActivity(intent)
+//        }
+
     }
 
     private fun scheduleNotification()
@@ -52,6 +60,7 @@ class TaskNotification : AppCompatActivity() {
             pendingIntent
         )
         showAlert(time, title, message)
+
     }
 
     private fun showAlert(time: Long, title: String, message: String)
@@ -60,6 +69,7 @@ class TaskNotification : AppCompatActivity() {
         val dateFormat = android.text.format.DateFormat.getLongDateFormat(applicationContext)
         val timeFormat = android.text.format.DateFormat.getTimeFormat(applicationContext)
 
+        //show summary of chosen information
         AlertDialog.Builder(this)
             .setTitle("Notification Scheduled")
             .setMessage(
@@ -70,7 +80,7 @@ class TaskNotification : AppCompatActivity() {
             .show()
 
         Toast.makeText(applicationContext, "Reminder successfully created.", Toast.LENGTH_SHORT).show()
-        Toast.makeText(applicationContext, "Press the back button to return to the main page.", Toast.LENGTH_LONG).show()
+//        Toast.makeText(applicationContext, "Press the back button to return to the main page.", Toast.LENGTH_LONG).show()
     }
 
     private fun getTime(): Long

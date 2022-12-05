@@ -71,6 +71,7 @@ class ToDoDialogFragment : DialogFragment() {
 
             }
         }
+
     }
 
     interface OnDialogNextBtnClickListener{
