@@ -33,6 +33,7 @@ class SignInFragment : Fragment() {
 
         init(view)
 
+        //toggle to signUp fragment
         binding.textViewSignUp.setOnClickListener {
             navController.navigate(R.id.action_signInFragment_to_signUpFragment)
         }

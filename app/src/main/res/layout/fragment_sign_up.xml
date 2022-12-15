@@ -127,7 +127,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:hint="@string/re_enter_your_pass"
+                android:hint="Re-enter Password"
                 android:inputType="textPassword"
                 android:paddingStart="12dp"
                 android:paddingTop="15dp"
