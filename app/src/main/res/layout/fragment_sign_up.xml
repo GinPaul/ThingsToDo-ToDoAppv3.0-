@@ -51,7 +51,7 @@
                 android:hint="@string/enter_your_email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:textColor="@color/darkBlue" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +89,7 @@
                 android:hint="@string/enter_your_pass"
                 android:inputType="textPassword"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:textColor="@color/darkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -130,7 +130,7 @@
                 android:hint="Re-enter Password"
                 android:inputType="textPassword"
                 android:paddingStart="12dp"
-                android:paddingTop="15dp"
+                android:paddingTop="10dp"
                 android:textColor="@color/darkBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>

@@ -8,4 +8,8 @@
     <string name="type_your_task">Input Task</string>
     <string name="schedule_the_notification">Schedule the Notification</string>
     <string name="organize_your_day">Organize Your Day</string>
+    <string name="set_your_reminder">Set your reminder</string>
+    <string name="notification_name">Notification name</string>
+    <string name="details_optional">Details (optional)</string>
+    <string name="return_to_task_list">Return to Task List</string>
 </resources>

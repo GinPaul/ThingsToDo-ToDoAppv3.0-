@@ -8,6 +8,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import com.kodego.app.thingstodo.databinding.ActivityTaskNotificationBinding
 import com.kodego.app.thingstodo.fragments.HomeFragment
@@ -17,6 +18,10 @@ class TaskNotification : AppCompatActivity() {
 
     private lateinit var navController: NavController
     lateinit var binding: ActivityTaskNotificationBinding
+
+    private val fragmentManger = supportFragmentManager
+    private lateinit var manger: FragmentTransaction
+    private val homeFrag = HomeFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,11 +33,14 @@ class TaskNotification : AppCompatActivity() {
         //to create notification
         createNotificationChannel()
         binding.submitButton.setOnClickListener { scheduleNotification() }
-
-
+//
+//        //to return from notification activity to home fragment >> not yet final
 //        binding.backButton.setOnClickListener {
-//                val intent = Intent (this@TaskNotification, MainActivity::class.java)
-//                startActivity(intent)
+//
+//            manger = fragmentManger.beginTransaction()
+//                .replace(R.id.myViewTaskNotification,homeFrag)
+//            manger.commit()
+//
 //        }
 
     }
